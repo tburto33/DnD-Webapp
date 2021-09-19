@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import './App.css';
 import dndheader from './dnd.png';
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -18,13 +17,10 @@ function App() {
             <img class="img-fluid header-img" src={dndheader} alt="dnd-logo" />
           </div>
           <div class="col-sm text-center">
-            <Button variant="primary">REROLL</Button>
+            <Button variant="primary" size="lg">REROLL</Button>
           </div>
         </div>
       </header>
-      <body>
-        <p>Hello World!</p>
-      </body>
     </div>
   );
 }
