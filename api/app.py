@@ -29,9 +29,16 @@ def set_char():
     return clss + ',' + race
 
 @app.route('/race')
-def set_race():
+def get_race():
     race = random.choice(char_race.char_race)
-    return race
+    return {'race': race}
+
+@app.route('/race-desc')
+def race_desc():
+    race = random.choice(char_race.char_race)
+    get_char_desc = char_race.races[race]
+    return get_char_desc
+    
 
 @app.route('/create-char')
 def create_char():
@@ -42,4 +49,14 @@ def create_char():
     stats.set_ability_modifiers()
     modifiers = stats.char_modifiers
     char_hp = stats.set_starting_hp(clss)
-    return race + ', ' + clss + ', ' + str(char_hp) + ', ' + str(abilities) + ', ' + str(modifiers) 
+    race_desc = char_race.races[race]
+    clss_desc = char_class.classes[clss]
+
+    return {'race': race,
+    'clss': clss,
+    'hp': str(char_hp),
+    'abilities': str(abilities),
+    'modifiers': str(modifiers),
+    'race-desc': race_desc,
+    'clss-desc': clss_desc}
+    # return race + ', ' + clss + ', ' + str(char_hp) + ', ' + str(abilities) + ', ' + str(modifiers) + ', ' + race_desc + ', ' + clss_desc 

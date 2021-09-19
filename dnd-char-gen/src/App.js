@@ -17,7 +17,7 @@ function App() {
             <img class="img-fluid header-img" src={dndheader} alt="dnd-logo" />
           </div>
           <div class="col-sm text-center">
-            <Button variant="primary" size="lg">REROLL</Button>
+            <Button variant="primary" size="lg" onClick="doSomething()">REROLL</Button>
           </div>
         </div>
       </header>
