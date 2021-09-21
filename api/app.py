@@ -1,5 +1,5 @@
 from os import stat
-from flask import Flask, jsonify
+from flask import Flask, json, jsonify
 from data import char_class, char_race
 import stats
 import random
@@ -37,7 +37,7 @@ def get_race():
 def race_desc():
     race = random.choice(char_race.char_race)
     get_char_desc = char_race.races[race]
-    return get_char_desc
+    return jsonify(desc=get_char_desc)
     
 
 @app.route('/create-char')
@@ -52,11 +52,13 @@ def create_char():
     race_desc = char_race.races[race]
     clss_desc = char_class.classes[clss]
 
-    return {'race': race,
+    # return jsonify(race, clss, char_hp, abilities, modifiers, race_desc, clss_desc)
+
+    return jsonify(character=
+    {'race': race,
     'clss': clss,
     'hp': str(char_hp),
     'abilities': str(abilities),
     'modifiers': str(modifiers),
     'race-desc': race_desc,
-    'clss-desc': clss_desc}
-    # return race + ', ' + clss + ', ' + str(char_hp) + ', ' + str(abilities) + ', ' + str(modifiers) + ', ' + race_desc + ', ' + clss_desc 
+    'clss-desc': clss_desc}) 
