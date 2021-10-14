@@ -1,9 +1,17 @@
 import './App.css';
 import dndheader from './dnd.png';
-import 'bootstrap/dist/css/bootstrap.min.css'
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 // import CharStats from './Stats';
-import MainButton from './Button';
-import { characterData } from './Button';
+// import { characterData } from './Button';
+import MainButton from './Components/Button';
+import SaveBlock from './Components/SaveBlock';
+import StatBlock from './Components/StatBlocks';
+import SkillsBlock from './Components/SkillsBlock';
 
 function App() {
 
@@ -24,10 +32,32 @@ function App() {
           </div>
         </div>
       </header>
-      <div class="">
-        {/* <CharStats text='Name:' />
-        <CharStats text= 'Race:' /> */}
-      </div>
+      <Container fluid>
+        <Row>
+          <Col>Player Name: </Col>
+          <Col>Race:</Col>
+          <Col>Class:</Col>
+        </Row>
+        <Row>
+        <Col>Char Name: </Col>
+        <Col>Sex: </Col>
+        <Col>Hit Points: </Col>
+        </Row>
+        <Row>
+          <Col xs={1}>
+            <StatBlock statType="Strength" statMod="9" statTotal="-1"/>
+            <StatBlock statType="Dexterity" statMod="14" statTotal="2"/>
+            <StatBlock statType="Constitution" statMod="18" statTotal="4"/>
+            <StatBlock statType="Intelligence" statMod="11" statTotal="0"/>
+            <StatBlock statType="Wisdom" statMod="18" statTotal="4"/>
+            <StatBlock statType="Charisma" statMod="9" statTotal="-1"/>
+          </Col>
+          <Col md={2}>
+            <SaveBlock />
+            <SkillsBlock />
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }

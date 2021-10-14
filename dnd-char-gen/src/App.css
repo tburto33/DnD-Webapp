@@ -41,3 +41,29 @@
 .test {
   color: white
 }
+
+.stat-block {
+  border: 2px solid black;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.stat-mod {
+  border: 1px solid black;
+  border-radius: 100%;
+}
+
+.save-block {
+  border: 2px solid black;
+  font-size: 12px;
+  text-align: left;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+.text-align {
+  text-align: center;
+}
