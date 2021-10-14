@@ -1,11 +1,14 @@
 import './App.css';
 import dndheader from './dnd.png';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Button from 'react-bootstrap/Button';
+// import CharStats from './Stats';
+import MainButton from './Button';
+import { characterData } from './Button';
 
 function App() {
 
   return (
+    // Header
     <div className="App">
       <header className="App-header">
         <div class="col">
@@ -17,10 +20,14 @@ function App() {
             <img class="img-fluid header-img" src={dndheader} alt="dnd-logo" />
           </div>
           <div class="col-sm text-center">
-            <Button variant="primary" size="lg" onClick="doSomething()">REROLL</Button>
+            <MainButton />
           </div>
         </div>
       </header>
+      <div class="">
+        {/* <CharStats text='Name:' />
+        <CharStats text= 'Race:' /> */}
+      </div>
     </div>
   );
 }
