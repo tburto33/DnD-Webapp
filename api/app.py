@@ -54,7 +54,7 @@ def create_char():
 
     # return jsonify(race, clss, char_hp, abilities, modifiers, race_desc, clss_desc)
 
-    return jsonify(character=
+    return jsonify(
     {'race': race,
     'clss': clss,
     'hp': str(char_hp),
