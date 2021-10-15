@@ -49,16 +49,10 @@ def create_char():
     stats.set_ability_modifiers()
     modifiers = stats.char_modifiers
     char_hp = stats.set_starting_hp(clss)
-    race_desc = char_race.races[race]
-    clss_desc = char_class.classes[clss]
-
-    # return jsonify(race, clss, char_hp, abilities, modifiers, race_desc, clss_desc)
 
     return jsonify(
     {'race': race,
     'clss': clss,
     'hp': str(char_hp),
     'abilities': str(abilities),
-    'modifiers': str(modifiers),
-    'race-desc': race_desc,
-    'clss-desc': clss_desc}) 
+    'modifiers': str(modifiers)}) 

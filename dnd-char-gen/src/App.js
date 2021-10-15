@@ -6,8 +6,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-// import CharStats from './Stats';
-// import { characterData } from './Button';
+import { race, clss, hp, abilities, modifiers } from './Components/Button';
 import MainButton from './Components/Button';
 import SaveBlock from './Components/SaveBlock';
 import StatBlock from './Components/StatBlocks';
@@ -32,31 +31,28 @@ function App() {
           </div>
         </div>
       </header>
-      <Container fluid>
-        <Row>
-          <Col>Player Name: </Col>
-          <Col>Race:</Col>
-          <Col>Class:</Col>
+      <Container fluid class="stat-block">
+        <Row sm={3}>
+          <Col>Race: {race}</Col>
+          <Col>Class: {clss}</Col>
+          <Col>Hit Points: {hp}</Col>
         </Row>
-        <Row>
-        <Col>Char Name: </Col>
-        <Col>Sex: </Col>
-        <Col>Hit Points: </Col>
-        </Row>
-        <Row>
-          <Col xs={1}>
-            <StatBlock statType="Strength" statMod="9" statTotal="-1"/>
-            <StatBlock statType="Dexterity" statMod="14" statTotal="2"/>
-            <StatBlock statType="Constitution" statMod="18" statTotal="4"/>
-            <StatBlock statType="Intelligence" statMod="11" statTotal="0"/>
-            <StatBlock statType="Wisdom" statMod="18" statTotal="4"/>
-            <StatBlock statType="Charisma" statMod="9" statTotal="-1"/>
-          </Col>
-          <Col md={2}>
-            <SaveBlock />
-            <SkillsBlock />
-          </Col>
-        </Row>
+        </Container>
+        <Container fluid>
+          <Row>
+            <Col sm={1}>
+              <StatBlock statType="Strength" statMod={abilities['str']} statTotal={modifiers['str']}/>
+              <StatBlock statType="Dexterity" statMod={abilities['dex']} statTotal={modifiers['dex']}/>
+              <StatBlock statType="Constitution" statMod={abilities['cons']} statTotal={modifiers['cons']}/>
+              <StatBlock statType="Intelligence" statMod={abilities['int']} statTotal={modifiers['int']}/>
+              <StatBlock statType="Wisdom" statMod={abilities['wis']} statTotal={modifiers['wis']}/>
+              <StatBlock statType="Charisma" statMod={abilities['char']} statTotal={modifiers['char']}/>
+            </Col>
+            <Col md={2}>
+              <SaveBlock />
+              <SkillsBlock />
+            </Col>
+          </Row>
       </Container>
     </div>
   );

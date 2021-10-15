@@ -2,27 +2,31 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 
+var race, clss, hp, abilities = [], modifiers = [];
 
-var characterData = [];
 function MainButton() {
     function getHttpRequest() {
-        characterData.length = 0;
         const Http = new XMLHttpRequest();
         const url = 'http://localhost:3000/create-char';
         Http.onreadystatechange = function() {
             if(this.readyState === 4 && this.status === 200) {
-                console.log(Http.responseText);
-                characterData.push(JSON.parse(Http.responseText));
-                console.log(characterData);
+                console.log(JSON.parse(Http.responseText));
+                var data = JSON.parse(Http.responseText);
+                race = data.race;
+                clss = data.clss;
+                hp = data.hp;
+                abilities = data.abilities;
+                modifiers = data.modifiers;
+                console.log(race, clss, hp, abilities, modifiers);
             }
         }
         Http.open("GET", url);
         Http.send();
     }    
     return(
-        <Button variant="primary" size="lg" onClick={getHttpRequest}>REROLL</Button>
+        <Button variant="primary" size="lg" id="main-button" onClick={getHttpRequest}>REROLL</Button>
     );
 }
 
 export default MainButton;
-export {characterData};
+export {race, clss, hp, abilities, modifiers};
