@@ -6,10 +6,6 @@ import random
 
 app = Flask(__name__)
 
-@app.route('/world')
-def hello_world():
-    return str("Hello World")
-
 @app.route('/d20')
 def set_d20_roll(min_num=1, max_num=20):
     return str(random.randint(min_num, max_num))
