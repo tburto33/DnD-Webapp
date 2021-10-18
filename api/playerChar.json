@@ -1,0 +1,7 @@
+{
+    "abilities": "{'str': 13, 'dex': 12, 'cons': 8, 'int': 13, 'wis': 11, 'char': 10}",
+    "clss": "paladin",
+    "hp": "9",
+    "modifiers": "{'str': 1, 'dex': 1, 'cons': -1, 'int': 1, 'wis': 0, 'char': 0}",
+    "race": "gnome"
+}
