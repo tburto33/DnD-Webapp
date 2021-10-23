@@ -42,12 +42,12 @@ function App() {
         <Container fluid>
           <Row>
             <Col sm={1}>
-              <StatBlock statType="Strength" statMod={abilities['str']} statTotal={modifiers['str']}/>
-              <StatBlock statType="Dexterity" statMod={abilities['dex']} statTotal={modifiers['dex']}/>
-              <StatBlock statType="Constitution" statMod={abilities['cons']} statTotal={modifiers['cons']}/>
-              <StatBlock statType="Intelligence" statMod={abilities['int']} statTotal={modifiers['int']}/>
-              <StatBlock statType="Wisdom" statMod={abilities['wis']} statTotal={modifiers['wis']}/>
-              <StatBlock statType="Charisma" statMod={abilities['char']} statTotal={modifiers['char']}/>
+              <StatBlock statType="Strength" />
+              {/* <StatBlock statType="Dexterity" />
+              <StatBlock statType="Constitution" />
+              <StatBlock statType="Intelligence" />
+              <StatBlock statType="Wisdom" />
+              <StatBlock statType="Charisma" /> */}
             </Col>
             <Col md={2}>
               <SaveBlock />
