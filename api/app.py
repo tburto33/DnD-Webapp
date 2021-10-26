@@ -16,13 +16,13 @@ def set_d20_roll(min_num=1, max_num=20):
 def get_abilities():
     file = open('playerChar.json')
     data = json.load(file)
-    return data['abilities']
+    return jsonify(data['abilities'])
 
 @app.route('/modifiers')
 def get_modifiers():
     file = open('playerChar.json')
     data = json.load(file)
-    return data['modifiers']
+    return jsonify(data['modifiers'])
 
 @app.route('/clss')
 def get_clss():
@@ -57,8 +57,8 @@ def create_char():
         'race': race,
         'clss': clss,
         'hp': str(char_hp),
-        'abilities': str(abilities),
-        'modifiers': str(modifiers)
+        'abilities': abilities,
+        'modifiers': modifiers
     }
 
     # JSON used as temporary database for now
@@ -67,9 +67,9 @@ def create_char():
     with open("playerChar.json", "w") as outfile:
         outfile.write(char_to_json)
 
-    # return jsonify(
-    # {'race': race,
-    # 'clss': clss,
-    # 'hp': str(char_hp),
-    # 'abilities': str(abilities),
-    # 'modifiers': str(modifiers)}) 
+    return jsonify(
+    {'race': race,
+    'clss': clss,
+    'hp': str(char_hp),
+    'abilities': abilities,
+    'modifiers': modifiers}) 

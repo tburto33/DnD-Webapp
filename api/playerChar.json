@@ -1,7 +1,21 @@
 {
-    "abilities": "{'str': 13, 'dex': 12, 'cons': 8, 'int': 13, 'wis': 11, 'char': 10}",
-    "clss": "paladin",
-    "hp": "9",
-    "modifiers": "{'str': 1, 'dex': 1, 'cons': -1, 'int': 1, 'wis': 0, 'char': 0}",
-    "race": "gnome"
+    "abilities": {
+        "char": 9,
+        "cons": 9,
+        "dex": 11,
+        "int": 16,
+        "str": 17,
+        "wis": 11
+    },
+    "clss": "monk",
+    "hp": "7",
+    "modifiers": {
+        "char": -1,
+        "cons": -1,
+        "dex": 0,
+        "int": 3,
+        "str": 3,
+        "wis": 0
+    },
+    "race": "half-orc"
 }
