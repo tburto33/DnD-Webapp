@@ -7,11 +7,12 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import { race, clss, hp, abilities, modifiers } from './Components/Button';
+// import { race, clss, hp, abilities, modifiers } from './Components/Button';
 import MainButton from './Components/Button';
 import SaveBlock from './Components/SaveBlock';
 import StatBlock from './Components/StatBlocks';
 import SkillsBlock from './Components/SkillsBlock';
+import CharStats from './Components/Stats';
 
 function App() {
 
@@ -33,27 +34,23 @@ function App() {
         </div>
       </header>
       <Container fluid class="stat-block">
-        <Row sm={3}>
-          <Col>Race: {race}</Col>
-          <Col>Class: {clss}</Col>
-          <Col>Hit Points: {hp}</Col>
+        <CharStats />
+      </Container>
+      <Container fluid>
+        <Row>
+          <Col sm={1}>
+            <StatBlock statType="Strength" />
+            {/* <StatBlock statType="Dexterity" />
+            <StatBlock statType="Constitution" />
+            <StatBlock statType="Intelligence" />
+            <StatBlock statType="Wisdom" />
+            <StatBlock statType="Charisma" /> */}
+          </Col>
+          <Col md={2}>
+            <SaveBlock />
+            <SkillsBlock />
+          </Col>
         </Row>
-        </Container>
-        <Container fluid>
-          <Row>
-            <Col sm={1}>
-              <StatBlock statType="Strength" />
-              {/* <StatBlock statType="Dexterity" />
-              <StatBlock statType="Constitution" />
-              <StatBlock statType="Intelligence" />
-              <StatBlock statType="Wisdom" />
-              <StatBlock statType="Charisma" /> */}
-            </Col>
-            <Col md={2}>
-              <SaveBlock />
-              <SkillsBlock />
-            </Col>
-          </Row>
       </Container>
     </div>
   );

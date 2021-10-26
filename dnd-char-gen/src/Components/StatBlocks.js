@@ -15,8 +15,9 @@ function StatBlock(props) {
     useEffect(() => {
         const getAbilities = async () => {
             const response = await api.get('/abilities');
+            console.log(response);
             console.log(response.data);
-            setStat(response.data);
+            setStat(response.data["str"]);
         }
         getAbilities();
     }, [])
@@ -24,8 +25,8 @@ function StatBlock(props) {
     useEffect(() => {
         const getModifiers = async () => {
             const response = await api.get('/modifiers');
-            const data = response.data;
-            setMod(data);
+            console.log(response);
+            // setMod(modifier["str"]);
         }
         getModifiers();
     }, [])
