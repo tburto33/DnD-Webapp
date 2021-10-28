@@ -6,54 +6,28 @@ const api = axios.create({
    baseURL: "http://localhost:3000"
 })
 
+//TODO: All Stats behind one API call on display...WHY?
+
 function StatBlock(props) {
 
-    const [stat, setStat] = useState([])
-    const [mod, setMod] = useState([])
+    const [stat, setStat] = useState("Stat")
+    const [mod, setMod] = useState("Mod")
     const [statName, setStatName] = useState('Ability')
 
     useEffect(() => {
         const getAbilities = async () => {
-            const response = await api.get('/abilities');
-            console.log(response);
-            console.log(response.data);
-            setStat(response.data["str"]);
+            const ability = await api.get('/abilities');
+            const modifier = await api.get('/modifiers');
+            console.log(ability, modifier);
+            setStat(ability.data[`${props.ability}`]);
+            setMod(modifier.data[`${props.mod}`]);
+            setStatName(`${props.statType}`);
         }
-        getAbilities();
+        document.getElementById("main-button").addEventListener("click", getAbilities);
     }, [])
-
-    useEffect(() => {
-        const getModifiers = async () => {
-            const response = await api.get('/modifiers');
-            console.log(response);
-            // setMod(modifier["str"]);
-        }
-        getModifiers();
-    }, [])
-
-    // function getRandomInt(max) {
-    //     return Math.floor(Math.random() * max)
-    // }
-
-    function setAbilityName() {
-        setStatName(`${props.statType}`)
-    }
-
-    // function setAbility() {
-    //     setStat(getRandomInt(20))
-    // }
-
-    // function setModifier() {
-    //     setMod(getRandomInt(5))
-    // }
-
-    function setAll() {
-        setAbilityName();
-    }
 
     return (
         <div class="stat-block">
-            <button id="test-btn" onClick={setAll}>TEST</button>
             <div>
                 {statName}
             </div>
@@ -66,7 +40,5 @@ function StatBlock(props) {
         </div>
     );
 }
-
-
 
 export default StatBlock;

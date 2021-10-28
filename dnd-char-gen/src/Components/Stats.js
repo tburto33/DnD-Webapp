@@ -9,6 +9,7 @@ const api = axios.create({
     baseURL: "http://localhost:3000"
 })
 
+//TODO: Race behind one call...WHY?
 function CharStats() {
 
     const [race, setRace] = useState("Race")
@@ -17,15 +18,15 @@ function CharStats() {
 
     useEffect(() => {
         const getCharInfo = async () => {
-            const race = await api.get('/race');
-            const clss = await api.get('/clss');
-            const hp = await api.get('/hp');
-            setRace(race.data);
-            setClss(clss.data);
-            setHp(hp.data);
+            const getRace = await api.get('/race');
+            const getClss = await api.get('/clss');
+            const getHp = await api.get('/hp');
+            setRace(getRace.data);
+            setClss(getClss.data);
+            setHp(getHp.data);
         }
-        getCharInfo();
-    });
+        document.getElementById("main-button").addEventListener("click", getCharInfo);
+    }, []);
 
     return(
         <Row sm={3}>

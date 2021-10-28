@@ -39,12 +39,12 @@ function App() {
       <Container fluid>
         <Row>
           <Col sm={1}>
-            <StatBlock statType="Strength" />
-            {/* <StatBlock statType="Dexterity" />
-            <StatBlock statType="Constitution" />
-            <StatBlock statType="Intelligence" />
-            <StatBlock statType="Wisdom" />
-            <StatBlock statType="Charisma" /> */}
+            <StatBlock statType="Strength" ability='str' mod='str' />
+            <StatBlock statType="Dexterity" ability='dex' mod='dex' />
+            <StatBlock statType="Constitution" ability='cons' mod='cons' />
+            <StatBlock statType="Intelligence" ability='int' mod='int' />
+            <StatBlock statType="Wisdom" ability='wis' mod='wis' />
+            <StatBlock statType="Charisma" ability='char' mod='char' />
           </Col>
           <Col md={2}>
             <SaveBlock />
