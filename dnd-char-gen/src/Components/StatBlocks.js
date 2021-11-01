@@ -9,7 +9,7 @@ const api = axios.create({
 //TODO: All Stats behind one API call on display...WHY?
 
 function StatBlock(props) {
-
+    
     const [stat, setStat] = useState("Stat")
     const [mod, setMod] = useState("Mod")
     const [statName, setStatName] = useState('Ability')
@@ -24,7 +24,7 @@ function StatBlock(props) {
             setStatName(`${props.statType}`);
         }
         document.getElementById("main-button").addEventListener("click", getAbilities);
-    }, [])
+    }, [stat, mod]);
 
     return (
         <div class="stat-block">

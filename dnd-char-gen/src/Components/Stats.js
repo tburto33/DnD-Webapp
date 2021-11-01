@@ -26,7 +26,7 @@ function CharStats() {
             setHp(getHp.data);
         }
         document.getElementById("main-button").addEventListener("click", getCharInfo);
-    }, []);
+    }, [race, clss, hp]);
 
     return(
         <Row sm={3}>
