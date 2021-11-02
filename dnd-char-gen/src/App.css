@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  margin: auto;
+  max-width: 960px;
+  color: white;
 }
 
 .App-logo {
@@ -15,12 +18,17 @@
 
 .App-header {
   background-color: black;
-  min-height: 75vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-body {
+  background-color: black;
   color: white;
 }
 
@@ -38,26 +46,32 @@
 }
 
 /* CUSTOM CSS */
-.test {
-  color: white
-}
-
-.stat-block {
-  /* border: 2px solid black;
-  font-size: 12px; */
+.char-info {
   font-weight: bold;
   text-align: center;
 }
 
+.ability-block {
+  border: 1px solid white;
+}
+
+.stat-block {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
 .stat-mod {
-  border: 1px solid black;
+  border: 1px solid white;
   border-radius: 100%;
 }
 
 .save-block {
-  border: 2px solid black;
+  border: 2px solid white;
   font-size: 12px;
+  font-weight: bold;
   text-align: left;
+  margin-top: 10px;
 }
 
 ul {

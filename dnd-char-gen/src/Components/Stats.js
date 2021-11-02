@@ -10,7 +10,7 @@ const api = axios.create({
 })
 
 //TODO: Race behind one call...WHY?
-function CharStats() {
+function CharStats(props) {
 
     const [race, setRace] = useState("Race")
     const [clss, setClss] = useState("Class")
@@ -28,12 +28,17 @@ function CharStats() {
         document.getElementById("main-button").addEventListener("click", getCharInfo);
     }, [race, clss, hp]);
 
+    
+
     return(
-        <Row sm={3}>
-            <Col>Race: {race.toUpperCase()}</Col>
-            <Col>Class: {clss.toUpperCase()}</Col>
-            <Col>Hit Points: {hp}</Col>
-        </Row>
+        <div>
+            {props.name}: {}
+        </div>
+        // <Row sm="auto">
+        //     <Col sm>Race: {race.toUpperCase()}</Col>
+        //     <Col sm>Class: {clss.toUpperCase()}</Col>
+        //     <Col sm>Hit Points: {hp}</Col>
+        // </Row>
     );
 }
 

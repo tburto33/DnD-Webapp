@@ -33,25 +33,27 @@ function App() {
           </div>
         </div>
       </header>
-      <Container fluid class="stat-block">
-        <CharStats />
-      </Container>
-      <Container fluid>
-        <Row>
-          <Col sm={1}>
-            <StatBlock statType="Strength" ability='str' mod='str' />
-            <StatBlock statType="Dexterity" ability='dex' mod='dex' />
-            <StatBlock statType="Constitution" ability='cons' mod='cons' />
-            <StatBlock statType="Intelligence" ability='int' mod='int' />
-            <StatBlock statType="Wisdom" ability='wis' mod='wis' />
-            <StatBlock statType="Charisma" ability='char' mod='char' />
-          </Col>
-          <Col md={2}>
-            <SaveBlock />
-            <SkillsBlock />
-          </Col>
-        </Row>
-      </Container>
+      <body class="App-body">
+        <Container fluid>
+          <CharStats />
+        </Container>
+        <Container fluid>
+          <Row>
+            <Col sm={1}>
+              <StatBlock statType="Strength" ability='str' mod='str' />
+              <StatBlock statType="Dexterity" ability='dex' mod='dex' />
+              <StatBlock statType="Constitution" ability='cons' mod='cons' />
+              <StatBlock statType="Intelligence" ability='int' mod='int' />
+              <StatBlock statType="Wisdom" ability='wis' mod='wis' />
+              <StatBlock statType="Charisma" ability='char' mod='char' />
+            </Col>
+            <Col md={2}>
+              <SaveBlock />
+              <SkillsBlock />
+            </Col>
+          </Row>
+        </Container>
+      </body>
     </div>
   );
 }
