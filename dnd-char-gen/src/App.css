@@ -3,6 +3,7 @@
   margin: auto;
   max-width: 960px;
   color: white;
+  background-color: black;
 }
 
 .App-logo {
@@ -30,6 +31,7 @@
 .App-body {
   background-color: black;
   color: white;
+  border-top: 1px solid white;
 }
 
 .App-link {
@@ -51,6 +53,11 @@
   text-align: center;
 }
 
+.desc-block {
+  border: 1px solid white;
+  margin-top: 10px;
+}
+
 .ability-block {
   border: 1px solid white;
 }
@@ -59,11 +66,16 @@
   font-weight: bold;
   text-align: center;
   margin-top: 10px;
+  border: 1px solid white;
+  border-radius: 10px;
 }
 
 .stat-mod {
   border: 1px solid white;
-  border-radius: 100%;
+  border-radius: 50%/50%;
+  width: 50px;
+  text-align: center;
+  margin: auto;
 }
 
 .save-block {

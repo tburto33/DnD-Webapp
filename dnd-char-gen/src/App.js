@@ -7,7 +7,6 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-// import { race, clss, hp, abilities, modifiers } from './Components/Button';
 import MainButton from './Components/Button';
 import SaveBlock from './Components/SaveBlock';
 import StatBlock from './Components/StatBlocks';
@@ -35,11 +34,33 @@ function App() {
       </header>
       <body class="App-body">
         <Container fluid>
+          <Row md="auto">
+            <Col>
+              <CharStats name="Race:" item='charRace' />
+            </Col>
+            <Col>
+              <CharStats name="Class:" item='charClss' />
+            </Col>
+            <Col>
+              <CharStats name="HP:" item='charHp' />
+            </Col>
+          </Row>
+          <Row>
+          <Col>
+          <CharStats name="Initiative:" />
+            </Col>
+            <Col>
+            <CharStats name="Speed:" />
+            </Col>
+            <Col>
+            <CharStats name="AC:" />
+            </Col>
+          </Row>
           <CharStats />
         </Container>
         <Container fluid>
           <Row>
-            <Col sm={1}>
+            <Col >
               <StatBlock statType="Strength" ability='str' mod='str' />
               <StatBlock statType="Dexterity" ability='dex' mod='dex' />
               <StatBlock statType="Constitution" ability='cons' mod='cons' />
@@ -47,9 +68,35 @@ function App() {
               <StatBlock statType="Wisdom" ability='wis' mod='wis' />
               <StatBlock statType="Charisma" ability='char' mod='char' />
             </Col>
-            <Col md={2}>
+            <Col>
               <SaveBlock />
               <SkillsBlock />
+            </Col>
+            <Col xs={7} class="desc-block">
+              <div class="desc-block">
+                <p>
+                  <b>Race/Class Description Here</b>
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, quo cetero convenire no. Qui eu accusata intellegebat, eu summo simul philosophia mea. An tota magna essent nec, mea ne primis dicunt accusam.
+                </p>  
+              </div>
+              <div class="desc-block">
+                <p>
+                  <b>Spell/Attack Desctiption Here</b>
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, quo cetero convenire no. Qui eu accusata intellegebat, eu summo simul philosophia mea. An tota magna essent nec, mea ne primis dicunt accusam.
+                </p>
+              </div>
+              <div class="desc-block">
+                <p>
+                  <b>Equipment Here</b>
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, quo cetero convenire no. Qui eu accusata intellegebat, eu summo simul philosophia mea. An tota magna essent nec, mea ne primis dicunt accusam.
+                </p>
+              </div>
             </Col>
           </Row>
         </Container>

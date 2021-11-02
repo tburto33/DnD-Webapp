@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+// import Row from 'react-bootstrap/Row';
+// import Col from 'react-bootstrap/Col';
 
 const api = axios.create({
     baseURL: "http://localhost:3000"
@@ -12,9 +12,9 @@ const api = axios.create({
 //TODO: Race behind one call...WHY?
 function CharStats(props) {
 
-    const [race, setRace] = useState("Race")
-    const [clss, setClss] = useState("Class")
-    const [hp, setHp] = useState("HP")
+    const [race, setRace] = useState("")
+    const [clss, setClss] = useState("")
+    const [hp, setHp] = useState("")
 
     useEffect(() => {
         const getCharInfo = async () => {
@@ -28,11 +28,15 @@ function CharStats(props) {
         document.getElementById("main-button").addEventListener("click", getCharInfo);
     }, [race, clss, hp]);
 
+    const charInfo = {
+        charRace: `${race.toUpperCase()}`, 
+        charClss: `${clss.toUpperCase()}`, 
+        charHp: `${hp}`} 
     
 
     return(
-        <div>
-            {props.name}: {}
+        <div class="char-info">
+            {props.name} {charInfo[`${props.item}`]}
         </div>
         // <Row sm="auto">
         //     <Col sm>Race: {race.toUpperCase()}</Col>
