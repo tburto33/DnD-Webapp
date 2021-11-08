@@ -1,21 +1,21 @@
 {
     "abilities": {
-        "char": 9,
-        "cons": 17,
-        "dex": 14,
-        "int": 14,
-        "str": 10,
-        "wis": 16
+        "char": 16,
+        "cons": 15,
+        "dex": 15,
+        "int": 16,
+        "str": 14,
+        "wis": 14
     },
-    "clss": "ranger",
-    "hp": "13",
+    "clss": "rogue",
+    "hp": "10",
     "modifiers": {
-        "char": -1,
-        "cons": 3,
+        "char": 3,
+        "cons": 2,
         "dex": 2,
-        "int": 2,
-        "str": 0,
-        "wis": 3
+        "int": 3,
+        "str": 2,
+        "wis": 2
     },
-    "race": "halfling"
+    "race": "human"
 }
