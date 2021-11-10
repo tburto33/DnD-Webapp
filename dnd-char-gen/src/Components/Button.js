@@ -3,8 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 
 
-var race, clss, hp, abilities = [], modifiers = [];
-
 function MainButton() {
     function getHttpRequest() {
         const Http = new XMLHttpRequest();

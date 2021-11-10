@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import Container from 'react-bootstrap/Container';
-// import Row from 'react-bootstrap/Row';
-// import Col from 'react-bootstrap/Col';
 
 const api = axios.create({
     baseURL: "http://localhost:3000"
@@ -17,6 +14,7 @@ function CharStats(props) {
     const [hp, setHp] = useState("")
 
     useEffect(() => {
+        
         const getCharInfo = async () => {
             const getRace = await api.get('/race');
             const getClss = await api.get('/clss');
@@ -27,6 +25,7 @@ function CharStats(props) {
         }
         document.getElementById("main-button").addEventListener("click", getCharInfo);
     }, [race, clss, hp]);
+    
 
     const charInfo = {
         charRace: `${race.toUpperCase()}`, 
@@ -38,11 +37,6 @@ function CharStats(props) {
         <div class="char-info">
             {props.name} {charInfo[`${props.item}`]}
         </div>
-        // <Row sm="auto">
-        //     <Col sm>Race: {race.toUpperCase()}</Col>
-        //     <Col sm>Class: {clss.toUpperCase()}</Col>
-        //     <Col sm>Hit Points: {hp}</Col>
-        // </Row>
     );
 }
 
