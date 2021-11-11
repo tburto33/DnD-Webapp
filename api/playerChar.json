@@ -1,21 +1,24 @@
 {
     "abilities": {
-        "char": 16,
-        "cons": 15,
-        "dex": 15,
+        "char": 14,
+        "cons": 9,
+        "dex": 13,
         "int": 16,
-        "str": 14,
-        "wis": 14
+        "str": 15,
+        "wis": 13
     },
-    "clss": "rogue",
-    "hp": "10",
+    "clss": "sorcerer",
+    "clss-desc": "A spellcaster who draws on inherent magic from a gift or bloodline. \nPrimary Ability: Charisma \nSaves: Constitution and Charisma",
+    "hp": "5",
     "modifiers": {
-        "char": 3,
-        "cons": 2,
-        "dex": 2,
+        "char": 2,
+        "cons": -1,
+        "dex": 1,
         "int": 3,
         "str": 2,
-        "wis": 2
+        "wis": 1
     },
-    "race": "human"
+    "race": "half-orc",
+    "race-desc": "Half-orcs' grayish pigmentation, sloping foreheads, jutting jaws, prominent teeth, andtowering builds make their orcish heritage plain for all to see. \nRacial Traits: +2 Strength, +1 Constitution, Darkvision, Menacing, Relentless Endurance,Savage Attacks",
+    "speed": "30"
 }

@@ -12,9 +12,23 @@ function CharStats(props) {
     const [race, setRace] = useState("")
     const [clss, setClss] = useState("")
     const [hp, setHp] = useState("")
+    const [initiative, setInitiative] = useState()
+    const [speed, setSpeed] = useState()
+    const [newInitiative, setNewInitiative] = useState()
     const [newHp, setNewHp] = useState()
     const [newRace, setNewRace] = useState()
     const [newClss, setNewClss] = useState()
+    const [newSpeed, setNewSpeed] = useState()
+
+    useEffect( async () => {
+        const getSpeed = await api.get('/speed');
+        setSpeed(getSpeed.data);
+    }, [newSpeed])
+    
+    useEffect( async () => {
+        const getInitiative = await api.get('/modifiers');
+        setInitiative(getInitiative.data['dex']);
+    }, [newInitiative])
 
     useEffect( async () => {
         const getInitialRace = await api.get('/race');
@@ -39,6 +53,10 @@ function CharStats(props) {
             setNewClss(newClss.data);
             const newHp = await api.get('/hp');
             setNewHp(newHp.data);
+            const newInitiative = await api.get('/modifiers');
+            setNewInitiative(newInitiative.data['dex']);
+            const newSpeed = api.get('/speed');
+            setNewSpeed(newSpeed.data);
         }
         document.getElementById("main-button").addEventListener("click", getNewData);
     },[]);
@@ -46,7 +64,9 @@ function CharStats(props) {
     const charInfo = {
         charRace: `${race.toUpperCase()}`, 
         charClss: `${clss.toUpperCase()}`, 
-        charHp: `${hp}`} 
+        charHp: `${hp}`,
+        initiative: `${initiative}`,
+        speed: `${speed}`,} 
     
 
     return(

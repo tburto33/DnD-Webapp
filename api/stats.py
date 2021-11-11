@@ -166,3 +166,12 @@ def charisma(race):
     else:
         char_total = ability_roll()
     return char_total
+
+#Sets player character speed based on race
+def char_speed(race):
+    if race == "dwarf" or race == "gnome" or race == "halfling":
+        speed = 25
+    else:
+        speed = 30
+    return speed
+

@@ -48,10 +48,10 @@ function App() {
           </Row>
           <Row>
           <Col>
-          <CharStats name="Initiative:" />
+          <CharStats name="Initiative:" item="initiative" />
             </Col>
             <Col>
-            <CharStats name="Speed:" />
+            <CharStats name="Speed:" item="speed" />
             </Col>
             <Col>
             <CharStats name="AC:" />
@@ -74,14 +74,7 @@ function App() {
               <SkillsBlock />
             </Col>
             <Col xs={7} class="desc-block">
-              <div class="desc-block">
-                <p>
-                  <b>Race/Class Description Here</b>
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet, quo cetero convenire no. Qui eu accusata intellegebat, eu summo simul philosophia mea. An tota magna essent nec, mea ne primis dicunt accusam.
-                </p>  
-              </div>
+              <Descriptions />
               <div class="desc-block">
                 <p>
                   <b>Spell/Attack Desctiption Here</b>

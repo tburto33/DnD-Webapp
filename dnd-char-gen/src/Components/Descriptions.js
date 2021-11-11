@@ -40,6 +40,7 @@ function Descriptions() {
                 <b>{raceDesc}</b>
             </p>
             </div>
+                <b>Class Info:</b>
             <p>
                 <b>{clssDesc}</b>
             </p>
