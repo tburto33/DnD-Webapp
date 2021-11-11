@@ -12,6 +12,7 @@ import SaveBlock from './Components/SaveBlock';
 import StatBlock from './Components/StatBlocks';
 import SkillsBlock from './Components/SkillsBlock';
 import CharStats from './Components/Stats';
+import Descriptions from './Components/Descriptions';
 
 function App() {
 
