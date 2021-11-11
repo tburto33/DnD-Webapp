@@ -35,15 +35,15 @@ def ability_modifier(ability):
     if ability == 10 or ability == 11:
         modifier = 0
     if ability == 12 or ability == 13:
-        modifier = 1
+        modifier = +1
     if ability == 14 or ability == 15:
-        modifier = 2
+        modifier = +2
     if ability == 16 or ability == 17:
-        modifier = 3
+        modifier = +3
     if ability == 18 or ability == 19:
-        modifier = 4
+        modifier = +4
     if ability == 20:
-        modifier = 5
+        modifier = +5
     return modifier
 
 
@@ -166,3 +166,12 @@ def charisma(race):
     else:
         char_total = ability_roll()
     return char_total
+
+#Sets player character speed based on race
+def char_speed(race):
+    if race == "dwarf" or race == "gnome" or race == "halfling":
+        speed = 25
+    else:
+        speed = 30
+    return speed
+

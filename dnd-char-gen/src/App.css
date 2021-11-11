@@ -1,9 +1,9 @@
 .App {
   text-align: center;
-  margin: auto;
-  max-width: 960px;
   color: white;
   background-color: black;
+  background-image: url("dndwall.jpg");
+  background-repeat: repeat;
 }
 
 .App-logo {
@@ -26,12 +26,16 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  margin: auto;
+  max-width: 1080px;
 }
 
 .App-body {
   background-color: black;
   color: white;
   border-top: 1px solid white;
+  margin: auto;
+  max-width: 1080px;
 }
 
 .App-link {
@@ -51,11 +55,15 @@
 .char-info {
   font-weight: bold;
   text-align: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .desc-block {
   border: 1px solid white;
+  border-radius: 10px;
   margin-top: 10px;
+  padding: 10px;
 }
 
 .ability-block {
@@ -80,6 +88,7 @@
 
 .save-block {
   border: 2px solid white;
+  border-radius: 10px;
   font-size: 12px;
   font-weight: bold;
   text-align: left;

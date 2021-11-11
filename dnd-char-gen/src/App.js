@@ -12,6 +12,7 @@ import SaveBlock from './Components/SaveBlock';
 import StatBlock from './Components/StatBlocks';
 import SkillsBlock from './Components/SkillsBlock';
 import CharStats from './Components/Stats';
+import Descriptions from './Components/Descriptions';
 
 function App() {
 
@@ -33,7 +34,7 @@ function App() {
         </div>
       </header>
       <body class="App-body">
-        <Container fluid>
+        <Container fluid class="char-info">
           <Row md="auto">
             <Col>
               <CharStats name="Race:" item='charRace' />
@@ -47,13 +48,13 @@ function App() {
           </Row>
           <Row>
           <Col>
-          <CharStats name="Initiative:" />
+          <CharStats name="Initiative:" item="initiative" />
             </Col>
             <Col>
-            <CharStats name="Speed:" />
+            <CharStats name="Prof Bonus:" item="prof" />
             </Col>
             <Col>
-            <CharStats name="AC:" />
+            <CharStats name="Speed:" item="speed" />
             </Col>
           </Row>
           <CharStats />
@@ -73,14 +74,7 @@ function App() {
               <SkillsBlock />
             </Col>
             <Col xs={7} class="desc-block">
-              <div class="desc-block">
-                <p>
-                  <b>Race/Class Description Here</b>
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet, quo cetero convenire no. Qui eu accusata intellegebat, eu summo simul philosophia mea. An tota magna essent nec, mea ne primis dicunt accusam.
-                </p>  
-              </div>
+              <Descriptions />
               <div class="desc-block">
                 <p>
                   <b>Spell/Attack Desctiption Here</b>
