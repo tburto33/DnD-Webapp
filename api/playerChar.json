@@ -1,20 +1,20 @@
 {
     "abilities": {
-        "char": 9,
-        "cons": 17,
-        "dex": 14,
-        "int": 14,
-        "str": 10,
-        "wis": 16
+        "char": 16,
+        "cons": 12,
+        "dex": 20,
+        "int": 15,
+        "str": 18,
+        "wis": 17
     },
-    "clss": "ranger",
+    "clss": "barbarian",
     "hp": "13",
     "modifiers": {
-        "char": -1,
-        "cons": 3,
-        "dex": 2,
+        "char": 3,
+        "cons": 1,
+        "dex": 5,
         "int": 2,
-        "str": 0,
+        "str": 4,
         "wis": 3
     },
     "race": "halfling"
